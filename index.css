@@ -1,0 +1,106 @@
+body{
+    background-color: black;
+}
+.page{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    background-color: black;
+    margin:0 auto;
+    color: white;
+    position: relative;
+    font-family: 'Inter', ‘Arial’, sans-serif;
+}
+.header{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.header__title{
+    text-overflow: ellipsis;
+    margin: 0;
+    font-family: 'Inter', ‘Arial’, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 48px;
+    text-align: center;
+}
+.main{
+    width: auto;
+}
+.elements{
+    margin: auto;
+    max-width:880px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 17px;
+    row-gap: 20px;
+    padding: 0;
+    padding-bottom: 66px; 
+}
+.element{
+    max-width: 240px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.element__img{
+    max-width: 240px;
+    border-radius: 10px 10px 0px 0px;
+}
+.element__img:hover{
+    opacity: 0.9;
+}
+.element__img:hover{
+    cursor: pointer;
+}
+@media screen and (max-width: 930px){
+    .elements{
+        max-width: 90%;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        margin: auto;
+        }
+}
+
+@media screen and (max-width: 548px){
+    .elements{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(6,1fr);
+    }
+}
+
+@media screen and (max-width: 320px){
+    .elements{
+        width:88%;
+        column-gap: 20px;
+        padding-bottom: 48px;
+    }
+ }
+
+ @media screen and (max-width: 980px){
+    .header__title{
+        font-size: 36px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 490px){
+    .header__title{
+        font-size: 30px;
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .header__title{
+        width: 189px;
+        font-size: 27px;
+        line-height: 33px;
+    }
+}
